@@ -1,4 +1,4 @@
-IMAGE_NAME = test
+IMAGE_NAME = cpee
 CONTAINER_ENGINE = docker
 
 force-build:

@@ -1,0 +1,3 @@
+#!/bin/sh
+sv start cpee || exit 1
+exec /run/start/instantiation -v start >>/var/log/cpee-instantiation.log 2>&1

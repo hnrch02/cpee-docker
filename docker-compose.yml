@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  cpee:
+    build: .
+    ports:
+      - '8080:80'
+    volumes:
+      - cpee-data:/var/lib/redis
+
+volumes:
+  cpee-data:
