@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: cpee
+  IMAGE_NAME: ${{ github.repository_owner }}/cpee
 
 jobs:
   build-and-push-image:
