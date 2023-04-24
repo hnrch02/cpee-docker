@@ -1,7 +1,7 @@
 {
-  "log-url": "http://localhost:8080/logs/",
-  "templates-url": "https://cpee.org/design/server/Templates.dir/?stage=development",
+  "log-url": "/logs/",
+  "templates-url": "https://cpee.org/hub/server/Templates.dir/?stage=development",
   "res-url": "https://cpee.org/flow/resources/",
-  "base-url": "http://localhost:8080/flow/engine/",
-  "save-url": "http://localhost:8080/design/server/"
+  "base-url": "/flow/engine/",
+  "save-url": "/design/server/"
 }
