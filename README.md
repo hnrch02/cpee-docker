@@ -34,4 +34,11 @@ docker-compose up --build
 
 We strongly recommend using the [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install) with your preferred Linux distribution (if you have none, use Ubuntu) to perform the steps listed above.
 
-If you can't or don't want to use WSL, download the [`docker-compose.yml`](https://raw.githubusercontent.com/hnrch02/cpee-docker/main/docker-compose.yml) file manually and start it with `docker-compose up` in PowerShell.
+If you can't or don't want to use WSL, run this in PowerShell:
+
+```powershell
+New-Item -Path cpee -ItemType Directory
+Set-Location -Path cpee
+Invoke-WebRequest https://raw.githubusercontent.com/hnrch02/cpee-docker/main/docker-compose.yml -OutFile docker-compose.yml
+docker-compose.exe up
+```
