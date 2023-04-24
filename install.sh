@@ -4,20 +4,22 @@ apt-get install --no-install-recommends -y ruby redis nginx
 apt-get clean
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-cd /run
-cpee new flow
-cpee-instantiation start
-cpee-logging-xes-yaml new cpee-log
-cpee cpui cpee-ui
+mkdir -p /cpee /var/log/cpee
 
-cd /run/flow
+cd /cpee
+cpee new flow
+cpee-instantiation instantiation
+cpee-logging-xes-yaml new log
+cpee cpui ui
+
+cd /cpee/flow
 sed -i '/use CPEE::implementation(opts)/e cat /build/config/cpee.rb' cpee
 ln -s /run/redis.sock redis.sock
 
 cd /var/www
-ln -s /run/cpee-log/logs
-ln -s /run/cpee-ui flow
-ln -s /run/cpee-ui/js_libs js_libs
+ln -s /cpee/log/logs
+ln -s /cpee/ui flow
+ln -s /cpee/ui/js_libs js_libs
 
 cd /build
 cp index.html /var/www/index.html
