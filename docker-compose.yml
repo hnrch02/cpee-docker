@@ -3,6 +3,7 @@ version: '3'
 services:
   cpee:
     build: .
+    image: ghcr.io/hnrch02/cpee:latest
     ports:
       - '8080:80'
     volumes:
