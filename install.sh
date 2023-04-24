@@ -14,7 +14,7 @@ cpee cpui ui
 
 cd /cpee/flow
 sed -i '/use CPEE::implementation(opts)/e cat /build/config/cpee.rb' cpee
-ln -s /run/redis.sock redis.sock
+ln -s /var/run/redis.sock redis.sock
 
 cd /var/www
 ln -s /cpee/log/logs
