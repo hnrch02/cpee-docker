@@ -27,6 +27,9 @@ cp config.json /var/www/flow/config.json
 cp config/nginx-localhost.conf /etc/nginx/sites-available/default
 cp config/redis.conf /etc/redis/redis.conf
 
+# temp fix until https://github.com/etm/CPEE/pull/2 is resolved
+cp config/cpee-logging.xml /cpee/flow/resources/notifications/logging/subscription.xml
+
 cd /build/runit
 for service in *
 do
