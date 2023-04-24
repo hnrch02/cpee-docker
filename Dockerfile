@@ -22,6 +22,11 @@ FROM phusion/baseimage:jammy-1.0.1
 COPY --from=build /var/lib/gems /var/lib/gems
 COPY --from=build /usr/local/bin/ /usr/local/bin
 
+RUN apt-get update && \
+	apt-get install --no-install-recommends -y ruby redis nginx && \
+	apt-get clean && \
+	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 COPY . /build
 RUN /build/install.sh
 

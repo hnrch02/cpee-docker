@@ -1,8 +1,4 @@
 #!/bin/bash
-apt-get update
-apt-get install --no-install-recommends -y ruby redis nginx
-apt-get clean
-rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 mkdir -p /cpee /var/log/cpee
 
